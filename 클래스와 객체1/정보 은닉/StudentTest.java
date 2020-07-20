@@ -1,0 +1,10 @@
+package hiding;
+
+public class StudentTest {
+	public static void main(String[] args) {
+		Student studentLee = new Student( );
+ 		studentLee.setStudentName("이상원"); //setSutdentName()메서드를 활용해 private 변수에 접근 가능
+
+		System.out.println(studentLee.getStudentName());
+	}
+}
