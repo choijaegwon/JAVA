@@ -8,6 +8,11 @@ class Book{
 		this.bookNumber = bookNumber;
 		this.bookTitle = bookTitle;
 	}
+
+@Override
+public String toString() { //toString()메서드 재정의
+	return bookTitle+ "," + bookNumber; 
+	}
 }
 
 public class TostingEx {
