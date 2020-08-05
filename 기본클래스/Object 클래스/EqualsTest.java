@@ -2,6 +2,10 @@ package object;
 
 class Student{
 	int studentId;
+	@Override
+	public int hashCode() {
+		return studentId;
+	}
 	String studentName;
 	
 	public Student(int studentId, String studentName) {
@@ -50,5 +54,11 @@ public class EqualsTest {
 			System.out.println("studentLee와 studentSang는 동일합니다.");
 		else
 			System.out.println("studentLee와 studentSang는 동일하지 않습니다.");	
+		
+		System.out.println("studentLee의 hashCode:"+studentLee.hashCode());
+		System.out.println("studentSang의 hashcode:"+studentSang.hashCode());
+		
+		System.out.println("studentLee의 실제 주소값:" + System.identityHashCode(studentLee));
+		System.out.println("studentSang의 실제 주소값 :" + System.identityHashCode(studentSang));
 	}
 }
