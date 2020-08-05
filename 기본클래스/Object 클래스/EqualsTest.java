@@ -12,6 +12,17 @@ class Student{
 	public String toString() {
 		return studentId + "," + studentName;
 	}
+
+@Override
+public boolean equals(Object obj) {
+	if(obj instanceof Student) {
+		Student std = (Student)obj;
+		if(this.studentId == std.studentId)
+			return true;
+		else return false;
+	}
+	return false;
+	}
 }
 
 public class EqualsTest {
